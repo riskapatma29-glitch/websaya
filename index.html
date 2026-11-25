@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | SMKN 2 Cipatujah</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --biru: #12355b;
+      --biru-tua: #0c2440;
+      --emas: #e9a820;
+      --latar: #f6f7f9;
+      --teks: #1d2733;
+      --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    body { font-family: var(--font); color: var(--teks); background: var(--latar); }
+    h1, h2, h3, h4, h5 { font-weight: 700; color: var(--biru); }
+
+    /* Navbar */
+    .navbar-sekolah { background: var(--biru); }
+    .navbar-sekolah .nav-link { color: rgba(255,255,255,.8); font-weight: 500; }
+    .navbar-sekolah .nav-link:hover { color: #fff; }
+    .navbar-sekolah .nav-link.active { color: #fff; box-shadow: inset 0 -3px 0 var(--emas); }
+    .logo-navbar { width: 44px; height: 44px; object-fit: contain; }
+
+    /* Tombol */
+    .btn-emas { background: var(--emas); border-color: var(--emas); color: var(--biru-tua); font-weight: 600; }
+    .btn-emas:hover { background: #d19715; border-color: #d19715; color: var(--biru-tua); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(12,36,64,.82), rgba(12,36,64,.82)),
+                  url("assets/img/hero.jpg") center / cover no-repeat, var(--biru-tua);
+      color: #fff;
+      padding: 6rem 0;
+    }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.25rem); }
+
+    /* Header halaman dalam */
+    .page-header { background: var(--biru); color: #fff; padding: 3rem 0 2.5rem; }
+    .page-header h1 { color: #fff; }
+    .page-header .breadcrumb-item a { color: var(--emas); text-decoration: none; }
+    .page-header .breadcrumb-item.active,
+    .page-header .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.75); }
+
+    /* Foto kepala sekolah */
+    .foto-kepsek {
+      width: 100%; max-width: 280px; aspect-ratio: 3 / 4; object-fit: cover;
+      border-radius: .75rem; border: 4px solid #fff; box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    }
+
+    /* Card */
+    .card { border: 0; box-shadow: 0 2px 10px rgba(18,53,91,.08); }
+    .card-aksen { border-top: 4px solid var(--emas); }
+
+    /* Galeri */
+    .galeri-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .carousel-item img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
+    @media (max-width: 576px) { .carousel-item img { aspect-ratio: 4 / 3; } }
+
+    /* Tabel identitas */
+    .tabel-identitas th { width: 38%; color: var(--biru); background: transparent; }
+
+    /* Footer */
+    footer { background: var(--biru-tua); color: rgba(255,255,255,.8); }
+    footer h5 { color: #fff; }
+    footer a { color: var(--emas); }
+
+    a:focus-visible, .btn:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sekolah sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo SMKN 2 Cipatujah" class="logo-navbar">
+        <span class="fw-bold">SMKN 2 Cipatujah</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Profile</li>
+        </ol>
+      </nav>
+      <h1 class="mb-0">Profil Sekolah</h1>
+    </div>
+  </header>
+
+  <main class="container py-5">
+
+    <section class="row g-4 mb-5">
+      <div class="col-lg-8">
+        <h2 class="mb-3">Sejarah Singkat</h2>
+        <p>SMKN 2 Cipatujah berlokasi di Kecamatan Cipatujah, Kabupaten Tasikmalaya, Jawa Barat. Sekolah ini hadir untuk memberikan pendidikan kejuruan yang berkualitas bagi generasi muda di wilayah selatan Tasikmalaya.</p>
+        <p>Berdiri pada tahun 2017.</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-aksen text-center">
+          <div class="card-body">
+            <img src="c:\Users\allin\Downloads\WhatsApp Image 2026-09-30 at 13.16.09.jpeg" alt="Foto Kepala Sekolah" class="foto-kepsek mb-3">
+            <h5 class="mb-0">Asep Marwan, S.Pd., M.Si.</h5>
+            <small class="text-secondary">Kepala Sekolah</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-4">Visi dan Misi</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Visi</h5>
+              <p class="card-text">[Tulis visi sekolah di sini.]</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Misi</h5>
+              <ul class="mb-0">
+                <li>[Misi pertama]</li>
+                <li>[Misi kedua]</li>
+                <li>[Misi ketiga]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-4">Identitas Sekolah</h2>
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table table-striped mb-0 tabel-identitas">
+            <tbody>
+              <tr><th scope="row">Nama Sekolah</th><td>SMKN 2 Cipatujah</td></tr>
+              <tr><th scope="row">NPSN</th><td>69752268</td></tr>
+              <tr><th scope="row">Status</th><td>Negeri</td></tr>
+              <tr><th scope="row">Alamat</th><td>Cipatujah, Kabupaten Tasikmalaya, Jawa Barat</td></tr>
+              <tr><th scope="row">Akreditasi</th><td>B (Baik)</td></tr>
+              <tr><th scope="row">Telepon / Email</th><td>SMKN2CIPATUJAH@gmail.com</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-4">Program Keahlian</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card card-aksen h-100">
+            <div class="card-body">
+              <h5 class="card-title">NAUTIKA KAPAL PENANGKAP IKAN</h5>
+              <p class="card-text">Deskripsi singkat program keahlian.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card card-aksen h-100">
+            <div class="card-body">
+              <h5 class="card-title">AGRIBISNIS PENGOLAHAN HASIL PERIKANAN</h5>
+              <p class="card-text">Deskripsi singkat program keahlian.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card card-aksen h-100">
+            <div class="card-body">
+              <h5 class="card-title">REKAYASA PERANGKAT LUNAK</h5>
+              <p class="card-text">Deskripsi singkat program keahlian.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <h5>SMKN 2 Cipatujah</h5>
+          <p class="mb-0">Cipatujah, Kabupaten Tasikmalaya, Jawa Barat<br>
+          Telp: +6285223978382 &bull; Email: SMKN2CIPATUJA@gmail.com</p>
+        </div>
+        <div class="col-md-6 text-md-end align-self-end">
+          <small>&copy; 2026 SMKN 2 Cipatujah. Dibuat oleh Kelompok 3.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
